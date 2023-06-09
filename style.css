@@ -29,13 +29,13 @@ h1 {
 }
 .box {
     color: white;
-    width: 360px;
+    width: 460px;
     border: 6px solid white;
-    border-radius: 90px;
+    border-radius: 45px;
     margin: 0 auto;
-    transition: 0.25s ease;
+    padding: 20px;
+    transition: 0.3s ease;
     background: black;
-    padding: 10px;
 }
 #response {
     visibility: hidden;
@@ -56,6 +56,10 @@ h1 {
     border-radius: 90px;
     z-index: -1;
 }
-footer p {
+div > h4 {
+    font-size: 1.4rem;
+}
+footer > p {
+    margin: 20px;
     text-align: right;
 }

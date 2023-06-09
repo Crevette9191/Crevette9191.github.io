@@ -85,3 +85,34 @@ document.addEventListener("keypress", (e) => {
     }
     if (e.key === "z") ring(e.key);
 });
+
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector("select");
+const form = document.querySelector("form");
+const choice = document.querySelector("form > div");
+
+let pseudo = "";
+let language = "English";
+
+inputName.addEventListener("input", (e) => {
+    pseudo = e.target.value;
+});
+
+select.addEventListener("input", (e) => {
+    language = e.target.value;
+});
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (cgv.checked && pseudo !== "") {
+        console.log(language);
+        console.log(pseudo);
+        choice.innerHTML = `
+        <h3>Pseudo : ${pseudo}</h3>
+        <h4>Langage préféré : ${language}</h4>
+    `;
+    } else {
+        alert("Veuillez entrer votre nom et accepter les CGV.");
+    }
+});
