@@ -60,6 +60,6 @@ div > h4 {
     font-size: 1.4rem;
 }
 footer > p {
-    margin: 20px;
+    margin: 0 20px;
     text-align: right;
 }

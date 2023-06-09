@@ -1,7 +1,7 @@
 const nav = document.querySelector("nav");
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 360) {
+    if (window.scrollY > 500) {
         nav.style.top = 0;
     } else {
         nav.style.top = "-50px";
@@ -108,10 +108,7 @@ form.addEventListener("submit", (e) => {
     if (cgv.checked && pseudo !== "") {
         console.log(language);
         console.log(pseudo);
-        choice.innerHTML = `
-        <h3>Pseudo : ${pseudo}</h3>
-        <h4>Langage préféré : ${language}</h4>
-    `;
+        choice.innerHTML = `<h3>Pseudo : ${pseudo} | Langue : ${language}</h3>`;
     } else {
         alert("Veuillez entrer votre nom et accepter les CGV.");
     }
