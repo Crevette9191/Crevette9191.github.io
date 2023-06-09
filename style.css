@@ -4,6 +4,7 @@
     list-style: none;
 }
 body {
+    margin: 0;
     text-align: center;
     min-height: 200vh;
 }
@@ -50,6 +51,7 @@ h1 {
     width: 50px;
     border: 2px solid pink;
     position: absolute;
+    visibility: hidden;
     transform: translate(-50%, -50%);
     border-radius: 90px;
     z-index: -1;
