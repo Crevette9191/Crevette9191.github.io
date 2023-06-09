@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Quiz</title>
-        <link rel="shortcut icon" href="Sumo.png" />
-        <link rel="stylesheet" href="style.css" />
-        <script defer src="script.js"></script>
-    </head>
-    <body>
-        <main>
-            <nav>
-                <ul>
-                    <li>Accueil</li>
-                    <li>Services</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
 
-            <h1>Quiz sur les Capitales</h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="shortcut icon" href="Sumo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
 
-            <div class="click-event box">
-                <h4>Quelle est la capitale du Pakistan ?</h4>
-                <button id="btn-1">Islamabad</button>
-                <button id="btn-2">Kaboul</button>
-                <button id="btn-3">Ankara</button>
-                <button id="btn-4">New Delhi</button>
-                <p id="response">La bonne réponse est Islamabad.</p>
-            </div>
+<body>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="https://fr.wikipedia.org/wiki/Islamabad">Islamabad</a></li>
+                <li><a href="https://fr.wikipedia.org/wiki/Kaboul">Kaboul</a></li>
+                <li><a href="https://fr.wikipedia.org/wiki/Ankara">Ankara</a></li>
+                <li><a href="https://fr.wikipedia.org/wiki/New_Delhi">New Delhi</a></li>
+            </ul>
+        </nav>
 
-            <div class="mousemove"></div>
+        <h1>Quiz sur les Capitales</h1>
 
-            <div class="keypress box">
-                <h2>Vous appuyez sur la touche : <span id="key"></span></h2>
-            </div>
+        <div class="click-event box">
+            <h2>Quelle est la capitale du Pakistan ?</h2>
+            <button id="btn-1">Islamabad</button>
+            <button id="btn-2">Kaboul</button>
+            <button id="btn-3">Ankara</button>
+            <button id="btn-4">New Delhi</button>
+            <p id="response">La bonne réponse est Islamabad.</p>
+        </div>
 
-            <form action="" class="box">
-                <input type="text" placeholder="Entrez votre nom" />
-                <select>
-                    <option value="English" selected>English</option>
-                    <option value="Français">Français</option>
-                    <option value="Español">Español</option>
-                    <option value="日本語">日本語</option>
-                </select>
-                <input type="checkbox" id="cgv" />
-                <label for="cgv">Accepter les CGV</label>
-                <input type="submit" value="Valider" />
+        <div class="mousemove"></div>
 
-                <div></div>
-            </form>
-        </main>
-        <footer>
-            <p><strong>&copy; 2023</strong></p>
-        </footer>
-    </body>
+        <div class="keypress box">
+            <h2>Vous appuyez sur la touche : <span id="key"></span></h2>
+        </div>
+
+        <form action="" class="box">
+            <input type="text" placeholder="Entrez votre nom." />
+            <select>
+                <option value="English" selected>English</option>
+                <option value="Français">Français</option>
+                <option value="Español">Español</option>
+                <option value="日本語">日本語</option>
+            </select>
+            <input type="checkbox" id="cgv" />
+            <label for="cgv">Accepter les CGV</label>
+            <input type="submit" value="Valider" />
+
+            <div></div>
+        </form>
+    </main>
+    <footer>
+        <p><strong>&copy; 2023</strong></p>
+    </footer>
+</body>
+
 </html>
