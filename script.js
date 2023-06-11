@@ -1,115 +1,34 @@
-const nav = document.querySelector("nav");
+const counterDisplay = document.querySelector("h1");
+let counter = 0;
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 500) {
-        nav.style.top = 0;
-    } else {
-        nav.style.top = "-50px";
-    }
-});
+const bubbleMaker = () => {
+    const bubble = document.createElement("span");
+    bubble.classList.add("bubble");
+    document.body.appendChild(bubble);
 
-const balise = document.querySelector(".click-event");
-const answer = document.getElementById("response");
-const btn1 = document.getElementById("btn-1");
-const btn2 = document.getElementById("btn-2");
-const btn3 = document.getElementById("btn-3");
-const btn4 = document.getElementById("btn-4");
+    const size = Math.random() * 200 + 100 + "px";
+    bubble.style.height = size;
+    bubble.style.width = size;
 
-btn1.addEventListener("click", () => {
-    answer.style.visibility = "visible";
-    balise.style.background = "green";
-});
+    bubble.style.top = Math.random() * 100 + 50 + "%";
+    bubble.style.left = Math.random() * 100 + "%";
 
-btn2.addEventListener("click", () => {
-    answer.style.visibility = "visible";
-    balise.style.background = "red";
-});
+    const plusMinus = Math.random() > 0.5 ? 1 : -1;
 
-btn3.addEventListener("click", () => {
-    answer.style.visibility = "visible";
-    balise.style.background = "red";
-});
+    // bubble.style.SetProperty("left", Math.random() * 100 * plusMinus + "%");
+    bubble.style.left = Math.random() * 100 * plusMinus + "%";
 
-btn4.addEventListener("click", () => {
-    answer.style.visibility = "visible";
-    balise.style.background = "red";
-});
+    bubble.addEventListener("click", () => {
+        counter++;
+        counterDisplay.textContent = counter;
+        bubble.remove();
+    });
 
-const mousemove = document.querySelector(".mousemove");
-
-window.addEventListener("mousemove", (e) => {
-    mousemove.style.visibility = "visible";
-    mousemove.style.left = e.pageX + "px";
-    mousemove.style.top = e.pageY + "px";
-});
-
-window.addEventListener("mousedown", () => {
-    mousemove.style.transform = "scale(2) translate(-25%, -25%)";
-});
-
-window.addEventListener("mouseup", () => {
-    mousemove.style.transform = "scale(1) translate(-50%, -50%)";
-    mousemove.style.border = "2px solid teal";
-});
-
-// balise.addEventListener("mouseenter", () => {
-//     balise.style.background = "rgba(0,0,0,0.6)";
-// });
-
-// balise.addEventListener("mouseout", () => {
-//     balise.style.background = "pink";
-// });
-
-// answer.addEventListener("mouseover", () => {
-//     answer.style.transform = "rotate(2deg)";
-// });
-
-const keypressContainer = document.querySelector(".keypress");
-const key = document.getElementById("key");
-
-const ring = (key) => {
-    const audio = new Audio();
-    audio.src = key + ".mp3";
-    audio.play();
+    setTimeout(() => {
+        bubble.remove();
+    }, 8000);
 };
 
-document.addEventListener("keypress", (e) => {
-    key.textContent = e.key;
-
-    if (e.key === "b") {
-        keypressContainer.style.background = "blue";
-    } else if (e.key === "m") {
-        keypressContainer.style.background = "brown";
-    } else {
-        keypressContainer.style.background = "black";
-    }
-    if (e.key === "z") ring(e.key);
-});
-
-const inputName = document.querySelector('input[type="text"]');
-const select = document.querySelector("select");
-const form = document.querySelector("form");
-const choice = document.querySelector("form > div");
-
-let pseudo = "";
-let language = "English";
-
-inputName.addEventListener("input", (e) => {
-    pseudo = e.target.value;
-});
-
-select.addEventListener("input", (e) => {
-    language = e.target.value;
-});
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    if (cgv.checked && pseudo !== "") {
-        console.log(language);
-        console.log(pseudo);
-        choice.innerHTML = `<h3>Pseudo : ${pseudo} | Langue : ${language}</h3>`;
-    } else {
-        alert("Veuillez entrer votre nom et accepter les CGV.");
-    }
-});
+setInterval(() => {
+    bubbleMaker();
+}, 500);
